@@ -67,7 +67,7 @@ for i in range(len(hlink_scnews)):
     news_scnews.append(('娱乐','新浪网',hlink_scnews[i],title_scnews[i].encode('utf-8'),keyword[i].encode('utf-8'),contents_scnews[i].encode('utf-8'),gettime[i]))
 
 try:
-    conn = MySQLdb.connect(host="localhost",user="root",passwd="2522742",charset="UTF8") 
+    conn = MySQLdb.connect(host="localhost",user="root",passwd="******",charset="UTF8") 
     conn.select_db('viewsys') 
     cur=conn.cursor()
     cur.executemany("""insert into newsapp_getnews(cat,src,url,title,keyword,contents,time) values(%s,%s,%s,%s,%s,%s,%s) """,news_scnews)
